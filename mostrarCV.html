@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale =1">
 		<link rel = "stylesheet" href = "style.css">
-		
+
 		<script type="text/javascript">
 
 			function obtener () {
@@ -12,8 +12,6 @@
 
 				const urlParams = new URLSearchParams(valores);
 				var datos = JSON.parse(urlParams.get('P_datos'));
-
-                document.write(datos)
 			}
 			
 		</script>
@@ -22,8 +20,14 @@
 
 	</head>
 	<body onload="obtener();"">
-		<div class="form-title">
+		<div class="form-title-cv">
 			<h1>AQUÍ TIENES TU CV</h1>
+
+
+		</div>
+		<div class="form-body-cv">
+
+
 		</div>
 	</body>
 </html>
