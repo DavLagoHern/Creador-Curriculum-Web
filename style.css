@@ -108,6 +108,25 @@ html{
     padding: 10px;
 }
 
+.fotoTexto{
+    width: 70%;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.submit{
+    width: 25%;
+    border:1px solid black;
+    border-radius: 5px;
+    padding:10px;
+    margin:10px 0;
+    color:black;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+}
 
 .botons{
     width: 100%;
@@ -119,4 +138,70 @@ html{
     font-size: 15px;
     cursor: pointer;
     text-align: center;
+}
+
+.div-40{
+    width: 40%;
+    float: left;
+    padding: 25px;
+}
+
+.div-60{
+    width: 60%;
+    float: left;
+    padding: 15px;
+}
+
+.div-60 h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.div-60 h2{
+    font-size: 25px;
+    margin-top: 15px;
+}
+.div-50{
+    width: 50%;
+    float: left;
+    padding: 25px;
+}
+
+.div-100{
+    width: 100%;
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 15px;
+    
+}
+
+.div-100 hr{
+    width: 95%;
+
+    
+}
+
+
+.div-100 h3{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.div-100 h2{
+    margin-top:10px;
+    text-decoration: underline;
+}
+
+
+.div-100-contacto{
+    width: 100%;
+    float: left;
+    margin-left: 10px;
+    margin-top: 15px;
+    
+}
+.div-100-contacto h3{
+    margin-top:10px;
+    font-size:20px;
 }

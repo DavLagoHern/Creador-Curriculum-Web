@@ -6,13 +6,25 @@
 		<link rel = "stylesheet" href = "style.css">
 
 		<script type="text/javascript">
+			var datos = new Object()
 
 			function obtener () {
 				const valores = window.location.search;
-
 				const urlParams = new URLSearchParams(valores);
-				var datos = JSON.parse(urlParams.get('P_datos'));
+				var datosAux = urlParams.get('P_datos');
+				datos = JSON.parse(datosAux);
+				transformar();
 			}
+
+			function transformar(){
+
+				for(let clave in datos){
+					stringAux = datos[clave];
+					stringAux = stringAux.replace(/(?:\r\n|\r|\n)/g, '<br>');
+					datos[clave] = stringAux;
+				}
+			}
+			obtener();
 			
 		</script>
 		
@@ -26,8 +38,68 @@
 
 		</div>
 		<div class="form-body-cv">
-
-
+			<div>
+				<div class="div-40">
+					<input type="image" style="border-radius: 50%; width: 200px;" src="foto_perfil.png"
+					>
+					
+				</div>
+				<div class="div-60">
+					<h1><script type="text/javascript">
+						document.write(datos.nombre);
+					</script><br><script type="text/javascript">
+					document.write(datos.apellido1+" ");
+					document.write(datos.apellido2);
+				</script></h1>
+					<hr>
+					<h2>CONTACTO:</h2>
+					<div class="div-100-contacto">
+						<h3>TELÉFONO: &nbsp;   
+							<script type="text/javascript">
+							document.write(datos.telefono);
+							</script></h3>
+						<br>
+						<h3>EMAIL: &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<script type="text/javascript">
+								document.write(datos.email);
+							</script></h3>
+					</div>
+				</div>
+			</div>
+			<div class="div-100">
+				<hr>
+			</div>
+			<div class="div-100">
+				<h2>Presentación:</h2>
+				<h3><script type="text/javascript">
+					document.write(datos.presentacion);
+				</script>
+				</h3>
+			</div>
+			<div class="div-100">
+				<h2>Estudios:      </h2>
+				<h3><script type="text/javascript">
+					document.write(datos.estudios);
+				</script></h3>
+			</div>
+			<div class="div-100">
+				<h2>Experiencia:     </h2>
+				<h3><script type="text/javascript">
+					document.write(datos.Experiencia);
+				</script></h3>
+			</div>
+			<div class="div-100">
+				<h2>Aptitudes:</h2>
+				<h3><script type="text/javascript">
+					document.write(datos.Aptitudes);
+				</script></h3>
+			</div>
+			<div class="div-100">
+				<h2>Idiomas:</h2>
+				<h3><script type="text/javascript">
+					document.write(datos.Idiomas);
+				</script></h3>
+			</div>
 		</div>
 	</body>
 </html>
