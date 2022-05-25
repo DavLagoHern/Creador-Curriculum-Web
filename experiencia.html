@@ -4,6 +4,31 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale =1">
 		<link rel = "stylesheet" href = "style.css">
+		
+		<script type="text/javascript">
+			
+			function capturar () {
+				const valores = window.location.search;
+				const urlParams = new URLSearchParams(valores);
+				var datosAntiguos = JSON.parse(urlParams.get('P_datos'));
+
+				var presentacion = document.getElementById("presentacion").value;
+				var Experiencia = document.getElementById("Experiencia").value;
+				var Idiomas = document.getElementById("Idiomas").value;
+				var Aptitudes = document.getElementById("Aptitudes").value;;
+		
+				var datos = datosAntiguos;
+				datos.Idiomas = Idiomas;
+				datos.Aptitudes = Aptitudes;
+				datos.Experiencia = Experiencia;
+				datos.presentacion = presentacion;
+
+				const myJSON = JSON.stringify(datos);
+				window.location.href = "mostrarCV.html?P_datos="+myJSON;
+			}
+		
+		</script>
+		
 		<title background-color: #DDE1EF; >Crea tu curriculum</title>
 
 	</head>
@@ -21,8 +46,7 @@
 			<textarea class = "parrafosTexto" id="Aptitudes" name ="Aptitudes" placeholder="Aptitudes"></textarea>
 			<h3>Idiomas:</h3>
 			<textarea class = "parrafosTexto" id="Idiomas" name ="Idiomas" placeholder="Idiomas"></textarea>
-			<input class ="botons" type = "button" onClick="location.href='experiencia.html'" value ="Mostrar CV">
-			<input class ="botons" type = "button" onClick="location.href='personal.html'" value ="Volver atrás">
+			<input class ="botons" type = "button" onClick="capturar()" value ="Mostrar CV">
 		</div>
 	</body>
 </html>

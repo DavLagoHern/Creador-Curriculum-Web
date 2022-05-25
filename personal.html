@@ -5,6 +5,28 @@
 		<link rel = "stylesheet" href = "style.css">
 		<title background-color: #DDE1EF; >Crea tu curriculum</title>
 
+		<script type="text/javascript">
+			function capturar () {
+				var name = document.getElementById("name").value;
+				var lastName1 = document.getElementById("lastName1").value;
+				var lastName2 = document.getElementById("lastName2").value;
+				var email = document.getElementById("email").value;
+				var phone = document.getElementById("phone").value;
+				var date = document.getElementById("date").value;
+		
+				var datos = new Object();
+				datos.nombre = name;
+				datos.apellidos = [lastName1,lastName2];
+				datos.email = email;
+				datos.telefono = phone;
+				datos.fecha = date;
+				const myJSON = JSON.stringify(datos);
+				window.location.href = "experiencia.html?P_datos="+myJSON;
+		
+			}
+		
+		</script>
+
 	</head>
 	<body>
 		<div class="form-title">
@@ -18,13 +40,13 @@
 			<input class ="datosTexto" type = "text" id="lastName1" name ="lastName1" placeholder="Primer apellido">
 			<input class ="datosTexto" type = "text" id="lastName2" name ="lastName2" placeholder="Segundo apellido">
 			<h3>Correo electrónico:</h3>
-			<input class ="datosTexto" type = "email" id="mail" name ="mail" placeholder="Email">
+			<input class ="datosTexto" type = "email" id="email" name ="email" placeholder="Email">
 			<h3>Telefono:</h3>
 			<input class ="datosTexto" type = "tel" id="phone" name ="phone" placeholder="Telefono">
 			<h3>Fecha de nacimiento:</h3>
 			<input class ="datosTexto" type = "date" id="date" name ="date">
-			<input class ="botons" type = "button" onClick="location.href='experiencia.html'" value ="Siguiente Paso">
-			<input class ="botons" type = "button" onClick="location.href='index.html'" value ="Volver atrás">
+			<input class ="botons" type = "button" onClick="capturar()" value ="Siguiente Paso">
 		</div>
 	</body>
 </html>
+
