@@ -77,12 +77,22 @@
     margin-bottom: 20px;
 }
 
+.parrafosTexto{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    resize: none;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+}
+
+
 .botons{
     width: 100%;
     border:1px solid black;
     border-radius: 5px;
     padding:15px;
-    margin:15px 0;
+    margin:10px 0;
     color:black;
     font-size: 15px;
     cursor: pointer;
